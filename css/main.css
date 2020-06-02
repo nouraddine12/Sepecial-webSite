@@ -1,0 +1,285 @@
+:root{
+    --main--color:#ff9800;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+/* Start Setting Box */
+.setting-box{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color:#fff;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: .3s;
+}
+.setting-box.open{
+    left: 0;
+}
+.setting-box .toggle-setting{
+    position: absolute;
+    right: -40px;
+    top: 100px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.setting-box .toggle-setting .fa-gear{
+    width: 40px;
+    padding: 10px 0;
+}
+.setting-box .option-box{
+    padding: 10px;
+    text-align: center;
+    background-color: #dadada;
+    margin: 10px;
+}
+.setting-box .option-box h4{
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+
+}
+.setting-box .option-box .color-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.setting-box .option-box .color-list li{
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .5;
+    display: inline-block;
+}
+.setting-box .option-box .color-list li.active{
+    opacity: 1;
+    border: 2px solid #fff;
+}
+.setting-box .option-box .color-list li:first-child{
+    background-color: #ff9800;
+}
+.setting-box .option-box .color-list li:nth-child(2){
+    background-color:#e91e63;
+}
+.setting-box .option-box .color-list li:nth-child(3){
+    background-color:#009688;
+}
+.setting-box .option-box .color-list li:nth-child(4){
+    background-color:#03a9f4;
+}
+.setting-box .option-box .color-list li:nth-child(5){
+    background-color:#4caf50;
+}
+.setting-box .random-background .no,
+.setting-box .random-background .yes{
+    width: 50px;
+    background-color: #009688;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: .6;
+}
+.setting-box .random-background span.active{
+    opacity: 1;
+}
+/* End Setting Box */
+/* Start Landing Page */
+
+.landding-page{
+    min-height: 100vh;
+    background-image: url('../imgs/slide5.jpg');
+    background-size: cover;
+    position: relative;
+}
+.landding-page .overlay{
+    background-color: rgba(0, 0, 0, 0.81);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.header-area{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+.header-area .logo{
+    width: 300px;
+    padding: 15px;
+    font-weight: bold ;
+}
+.header-area .links{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 15px;
+}
+.header-area .links li{
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.header-area .links li a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+.header-area .links li a:hover,
+.header-area .links li a.active
+{
+    color: var(--main--color);
+}
+.introduction-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+.introduction-text h1{
+    font-size: 37px;
+    margin: 0  0 12px;
+}
+.introduction-text h1 span{
+    color: var(--main--color);
+}
+.introduction-text p{
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0;
+}
+/* End Landing Page*/
+
+/* Start About Us*/
+.about-us{
+    padding-top: 50px ;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.about-us .info-box{
+    flex: 1;
+    padding: 30px; 
+}
+.about-us .info-box h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main--color);
+    margin: 0 0 10px;
+}
+.about-us .info-box p{
+    line-height: 1.8;
+    color: #777;
+    margin: 0;
+}
+
+.about-us .image-box{
+    flex: 1;
+    text-align: center;
+}
+.about-us .image-box img{
+    width: 250px;
+}
+/*End About US*/
+
+/* Start Skills */
+.skills{
+    padding-top: 50px ;
+    padding-bottom: 50px;
+    background-color: #cecbcb;
+}
+.skills h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main--color);
+    margin: 0 0 50px;
+    text-align: center;
+}
+.skills .skill-box{
+    background-color: #fff;
+    display: flex;
+    padding: 15px;
+    margin-bottom:15px;
+    line-height: 1.3;
+}
+
+.skills .skill-box .skill-name{
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+.skills .skill-box .skill-progress{
+    height: 30px;
+    width: calc(100% - 110px);
+    background-color: #ddd;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.skills .skill-box .skill-progress span{
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    background-color: var(--main--color);
+    height: 100%;
+    transition: all 5s;
+}
+
+
+/* End Skills */
+
+/* Start Gallery */
+
+.gallery{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.gallery h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main--color);
+    margin: 0 0 50px;
+    text-align: center;
+}
+.gallery .image-box{
+    text-align: center;
+}
+.gallery .images-box img{
+    width: 200px;
+    padding: 3px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* End Gallery*/

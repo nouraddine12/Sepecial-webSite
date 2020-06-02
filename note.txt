@@ -1,0 +1,7 @@
+- No Framework
+- Vanilla JavaScript
+- Many Plugins
+- JQuery For Plugins
+- UI/UX Sketches
+- Mind Mapping
+- My VS Code Extension

@@ -197,6 +197,23 @@ window.onscroll = function(){
             // Append Text To Class Button
 
             closeButton.appendChild(closeButtonText);
+
+            // Add Class To Close Button
+            closeButton.className = 'close-button';
+            
+            // Add Close Button To The Popup Box
+            popupBox.appendChild(closeButton);
         
         });
+     });
+
+     // Close Popup 
+     document.addEventListener("click", (e) =>{
+        if(e.target.classList == 'close-button'){
+            // Remove The Current Popup
+            e.target.parentNode.remove();
+
+            // Remove OverLay 
+            document.querySelector(".popup-overlay").remove();
+        }
      });

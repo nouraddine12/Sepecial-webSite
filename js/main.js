@@ -148,5 +148,55 @@ window.onscroll = function(){
 
             // Append Overlay To The Body
             document.body.appendChild(overlay);
+
+            // Create The Popup
+            let popupBox = document.createElement("div");
+
+            // Add Class To The Popup Box
+            popupBox.className = 'popup-box';
+
+            
+            if(img.alt !== null){
+                // Create Heading
+                let imgHeading = document.createElement("h3");
+
+                // Create Text For Heading
+
+                let imgText = document.createTextNode(img.alt);
+
+                // Apppend The Text To The Heading
+                imgHeading.appendChild(imgText);
+
+                // Append The Heading To The Popup Box
+
+                popupBox.appendChild(imgHeading);
+            }
+
+            // Create The Image
+            let popupImage = document.createElement("img");
+
+            // Set Image Source
+
+            popupImage.src = img.src;
+
+            // Add Image To Popup Box
+
+            popupBox.appendChild(popupImage);
+
+            // Append The Popupp Box To Body
+            document.body.appendChild(popupBox);
+
+            // Create The Close Span
+
+            let closeButton = document.createElement("span");
+
+            // Create The Button Text
+
+            let closeButtonText = document.createTextNode("X");
+
+            // Append Text To Class Button
+
+            closeButton.appendChild(closeButtonText);
+        
         });
      });

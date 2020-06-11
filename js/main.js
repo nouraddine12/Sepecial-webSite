@@ -217,3 +217,22 @@ window.onscroll = function(){
             document.querySelector(".popup-overlay").remove();
         }
      });
+
+
+     // Select All Bullets
+     const allBullets = document.querySelectorAll(".nav-bullets .bullet");
+     const allLinks = document.querySelectorAll(".links a");
+
+
+     function allBluttetsSeWere(element){
+        element.forEach(elem =>{
+            elem.addEventListener('click', (e) =>{
+                e.preventDefault();
+                document.querySelector(e.target.dataset.section).scrollIntoView({
+                   behavior: 'smooth'
+               }); 
+            });
+         });
+     }
+     allBluttetsSeWere(allBullets);
+     allBluttetsSeWere(allLinks);
